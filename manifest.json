@@ -1,0 +1,33 @@
+{
+  "name": "Download With Aria2",
+  "description": "本插件会接管 Chrome 内置下载功能，并将任务添加到 Aria2 进行下载。",
+  "author": "NickVico",
+  "homepage_url": "http://nickvico.com/",
+
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "31",
+
+  "icons": {
+    "128": "img/icon.png",
+    "64": "img/icon.png",
+    "48": "img/icon.png",
+    "32": "img/icon.png",
+    "16": "img/icon.png"
+   },
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+
+  "options_page": "options.html",
+
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Aria2 Web UI",
+    "default_popup": "ariang.html"
+  },
+
+  "permissions": [ "downloads", "notifications", "cookies", "storage", "unlimitedStorage", "<all_urls>" ]
+}
